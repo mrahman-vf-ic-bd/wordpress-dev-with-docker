@@ -16,7 +16,7 @@ max_execution_time = 600
 3.  Create a docker compose file with following contents
 
 ```
-#version: '3.7'
+version: '3.7'
 services:
   wordpress:
     depends_on:
