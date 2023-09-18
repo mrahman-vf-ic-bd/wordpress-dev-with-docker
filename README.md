@@ -76,7 +76,12 @@ UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://www.local-domain.
 UPDATE wp_posts SET post_content = replace(post_content, 'www.local-domain.com', 'www.live-domain.com'); 
 UPDATE wp_postmeta SET meta_value = replace(meta_value,'www.local-domain.com', 'www.live-domain.com');
 UPDATE wp_options SET option_value = replace(option_value,'www.local-domain.com', 'www.live-domain.com');
-UPDATE wp_posts SET guid = replace(guid, 'www.local-domain.com', 'www.live-domain.com'); 
+UPDATE wp_posts SET guid = replace(guid, 'www.local-domain.com', 'www.live-domain.com');
+```
+### To change the schema (http/https) from the site you need to replace the http/https
+Following query will replace https --> http
+```
+UPDATE wp_options SET option_value = replace(option_value,'https://www.local-domain.com', 'http://www.local-domain.com');
 ```
 
 Website Migration reference: https://jetpack.com/blog/how-to-move-a-wordpress-site-from-localhost-to-a-live-site/
